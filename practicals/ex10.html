@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Student Portal</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #111; background: #fff; padding: 20px; }
+        .skip-link { position: absolute; left: -999px; }
+        .skip-link:focus { position: static; background: #000; color: #fff; padding: 8px; }
+        a:focus, button:focus, input:focus { outline: 3px solid #2563eb; outline-offset: 2px; }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 16px; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <header>
+        <h1>Chitkara Accessible Student Portal</h1>
+        <nav aria-label="Primary Navigation">
+            <ul>
+                <li><a href="#profile">Student Profile</a></li>
+                <li><a href="#query-form">Support Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="profile">
+            <h2>Student Profile</h2>
+            <img src="profile.jpg" alt="Profile photo of Saksham" width="120" height="120">
+            <p>Name: Saksham | Program: B.E. CSE (1st Year)</p>
+        </section>
+
+        <section id="query-form">
+            <h2>Accessible Support Request Form</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="full-name">Full Name (Required):</label><br>
+                    <input type="text" id="full-name" name="name" required aria-required="true">
+                </div><br>
+                <div>
+                    <label for="roll-no">Roll Number:</label><br>
+                    <input type="text" id="roll-no" name="roll" aria-describedby="roll-help">
+                    <small id="roll-help">Enter your 10-digit university roll number.</small>
+                </div><br>
+                <button type="submit">Send Request</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

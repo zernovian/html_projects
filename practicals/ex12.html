@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors, Specificity & Inheritance</title>
+    <style>
+        /* Inheritance */
+        body { font-family: Arial, sans-serif; color: #333333; padding: 20px; }
+
+        /* Element Selector */
+        p { color: blue; }
+
+        /* Class Selector */
+        .bio { color: green; }
+
+        /* ID Selector */
+        #special-note { color: crimson; font-weight: bold; }
+
+        /* Attribute Selector */
+        a[target="_blank"] { color: darkorange; text-decoration: none; font-weight: bold; }
+
+        /* Combined Selectors */
+        .profile-card > h2 { border-bottom: 2px solid #1e293b; padding-bottom: 5px; }
+        .profile-card ul li { margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <h2>Student Profile: Saksham</h2>
+        <p>This paragraph uses element selector.</p>
+        <p class="bio">This paragraph uses a class selector (.bio) overriding the element selector.</p>
+        <p class="bio" id="special-note">This paragraph uses an ID selector (#special-note) overriding both element and class.</p>
+        <ul>
+            <li>Course: B.E. CSE (1st Year)</li>
+            <li>University: Chitkara University</li>
+        </ul>
+        <a href="https://github.com" target="_blank">External GitHub Link</a>
+    </div>
+</body>
+</html>

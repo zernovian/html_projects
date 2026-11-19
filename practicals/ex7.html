@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validated Student Registration Form</title>
+</head>
+<body>
+    <h1>Student Registration (With HTML5 Validation)</h1>
+    <form action="#" method="POST">
+        <label for="sname">Full Name (3–40 letters):</label><br>
+        <input type="text" id="sname" name="sname" required minlength="3" maxlength="40" 
+               pattern="[A-Za-z ]+" title="Only alphabets and spaces allowed"><br><br>
+
+        <label for="roll">University Roll No. (10 digits):</label><br>
+        <input type="text" id="roll" name="roll" required pattern="[0-9]{10}" 
+               placeholder="e.g., 2610991234" title="Enter 10-digit numeric roll number"><br><br>
+
+        <label for="email">College Email ID:</label><br>
+        <input type="email" id="email" name="email" required placeholder="student@chitkara.edu.in"><br><br>
+
+        <label for="age">Age (17 to 25):</label><br>
+        <input type="number" id="age" name="age" required min="17" max="25"><br><br>
+
+        <label for="pass">Password (min 8 characters):</label><br>
+        <input type="password" id="pass" name="pass" required minlength="8"><br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required max="2009-12-31"><br><br>
+
+        <button type="submit">Submit Validated Form</button>
+    </form>
+</body>
+</html>

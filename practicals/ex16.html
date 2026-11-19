@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Pseudo-classes & Pseudo-elements</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; }
+        .badge-heading::before {
+            content: "★ ";
+            color: #f59e0b;
+        }
+        .badge-heading::after {
+            content: " NEW";
+            background: #dc2626;
+            color: #fff;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        ul li:nth-child(odd) { background-color: #f1f5f9; }
+        ul li { padding: 8px; list-style: none; }
+        .action-btn {
+            padding: 10px 20px; background: #1e293b; color: #fff;
+            border: none; border-radius: 5px; cursor: pointer;
+        }
+        .action-btn:hover { background: #2563eb; }
+        .action-btn:active { transform: scale(0.97); }
+    </style>
+</head>
+<body>
+    <h2 class="badge-heading">Web Technologies Workshop</h2>
+    <ul>
+        <li>Module 1: HTML5 Semantics</li>
+        <li>Module 2: CSS3 Selectors &amp; Flexbox</li>
+        <li>Module 3: Pseudo-elements &amp; Animations</li>
+        <li>Module 4: Bootstrap Framework</li>
+    </ul>
+    <button class="action-btn">Hover &amp; Click Me</button>
+</body>
+</html>
